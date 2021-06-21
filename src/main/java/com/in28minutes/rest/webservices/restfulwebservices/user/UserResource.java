@@ -4,6 +4,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -47,8 +48,8 @@ public class UserResource {
 				linkTo(methodOn(this.getClass()).retrieveAllUsers());
 		
 		resource.add(linkTo.withRel("all-users"));
-		
-		//HATEOAS
+
+		//HATEOAS: Hyper Media as the engine of the application
 		
 		return resource;
 	}
